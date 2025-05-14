@@ -3,7 +3,7 @@ import "./header.css"
 const header = () => {
   return (
     <nav>
-      header
+      Header
     </nav>
   )
 }

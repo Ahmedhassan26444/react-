@@ -1,11 +1,11 @@
 import './App.css';
-import HeaderComponent from "./Componets/header"; // It's good practice to use PascalCase for component names
+import Header from "./Componets/header"; 
+import Home from "./Componets/home";
 function App() {
   return(
     <div>
-      hello
-      <HeaderComponent />
-      guys
+      <Header />
+      <Home/>
     </div>
   );
 }
