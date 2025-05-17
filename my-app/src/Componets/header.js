@@ -1,9 +1,8 @@
 import React from 'react'
-import "./header.css"
 const header = () => {
   return (
     <nav>
-      Header
+      Get Ready to complete your daily goals
     </nav>
   )
 }

@@ -1,37 +1,41 @@
 import React, { useState } from 'react';
+import Task from './Task';
 
 const Home = () => {
-  const [inputValue, setInputValue] = useState(0);
+  const [task, setTask] = useState([]);
+  const [title, settitle] = useState("");
+  const [discreption, setdiscreption] = useState("");
 
-  const increment = () => {
-    setInputValue(prev => prev + 1);
-  };
-
-  const decrement = () => {
-    setInputValue(prev => prev - 1);
-  };
-
-  const btnStyle = {
-    backgroundColor: "lightgrey",
-    margin: 10,
-    padding: 20,
-    border: "none",
-    fontSize: 20,
-    cursor: "pointer"
+  const submitHandler = (e) => {
+    e.preventDefault();
+    setTask([...task , {
+      Title: title,
+      Description: discreption
+    }]);
   };
 
   return (
-    <div>
-      <input
-        style={{ padding: 20, border: "1px solid grey", color: "grey" }}
-        type="number"
-        placeholder="Enter Something"
-        value={inputValue}
-        readOnly
-      />
-      <br />
-      <button style={btnStyle} onClick={increment}>+</button>
-      <button style={btnStyle} onClick={decrement}>-</button>
+    <div className='container'>
+      <h1>Daily Goals</h1>
+      <form onSubmit={submitHandler}>
+        <input
+          type="text"
+          placeholder='Title'
+          value={title}
+          onChange={(e) => settitle(e.target.value)}
+        />
+        <textarea
+          placeholder='description'
+          value={discreption}
+          onChange={(e) => setdiscreption(e.target.value)}
+        ></textarea>
+        <button type='submit'>Add</button>
+      </form>
+      {task.map((item , index) => {
+        return (
+          <Task key={index} title={item.Title} description={item.Description} />
+        );
+      })}
     </div>
   );
 };

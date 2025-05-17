@@ -1,4 +1,80 @@
-*{
-  margin: 0%;
-  padding: 0%;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: wheat;
+}
+
+nav {
+  background-color: blue;
+  font-family: sans-serif;
+  color: white;
+  border: 1px solid;
+  padding: 10px;
+  text-align: center;
+}
+
+.container {
+  min-height: 100vh;
+  background-color: cornsilk;
+  margin: auto;
+  width: 50%;
+  padding: 30px;
+}
+
+.container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.container form input,
+.container form textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.214);
+  margin-bottom: 10px; /* Added margin for spacing */
+}
+
+button {
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  background-color: gainsboro;
+  font-weight: bolder;
+}
+
+.container h1 {
+  text-align: center;
+  padding-bottom: 20px;
+  font-size: larger;
+  font-weight: bold;
+}
+
+.task {
+  display: flex;
+  padding: 15px;
+  background-color: white;
+  color: black;
+  margin: 20px;
+}
+
+.task > span {
+  color: rgba(0, 0, 0, 0.523);
+}
+
+.task > div {
+  width: 100%;
+}
+
+.task > button {
+  border-radius: 100%;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+  background-color: red;
 }
