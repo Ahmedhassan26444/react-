@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
 import Task from './Task';
-
 const Home = () => {
   const [task, setTask] = useState([]);
   const [title, settitle] = useState("");
   const [discreption, setdiscreption] = useState("");
-
   const submitHandler = (e) => {
     e.preventDefault();
     setTask([...task , {
@@ -13,7 +11,10 @@ const Home = () => {
       Description: discreption
     }]);
   };
-
+  const deleteTask  = (index) => {
+    const newTask = task.filter((item, i) => i !== index);
+    setTask(newTask);
+  }
   return (
     <div className='container'>
       <h1>Daily Goals</h1>
@@ -29,11 +30,17 @@ const Home = () => {
           value={discreption}
           onChange={(e) => setdiscreption(e.target.value)}
         ></textarea>
-        <button type='submit'>Add</button>
+        <button type="submit">Add</button>
       </form>
       {task.map((item , index) => {
         return (
-          <Task key={index} title={item.Title} description={item.Description} />
+          <Task 
+          key={index}
+          title={item.Title}
+           description={item.Description} 
+           deleteTask = {deleteTask}
+           index={index}
+           />
         );
       })}
     </div>

@@ -1,12 +1,14 @@
-import React from 'react'
-const Task = ({ Title ,  Description }) => {
+
+const Task = ({ title ,  description , deleteTask,index }) => {
   return (
     <div className="task">
       <div>
-        <p>{Title}</p>
-        <span>{Description}</span>
+        <p>{title}</p>
+        <span>{description}</span>
       </div>
-      <button>-</button>
+      <button onClick = {()=>{
+        deleteTask(index)
+      }}>-</button>
     </div>
   )
 }
