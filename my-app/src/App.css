@@ -15,7 +15,20 @@ nav {
   padding: 10px;
   text-align: center;
 }
+.header{
+    font-family: sans-serif;
+  color: white;
+  border: 1px solid;
+  padding: 10px;
+  text-align: center;
 
+}
+.header > a{
+  text-decoration: none;
+  color: black;
+  font-weight: bolder;
+  margin: 20px;
+}
 .container {
   min-height: 100vh;
   background-color: cornsilk;
