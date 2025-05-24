@@ -1,10 +1,12 @@
-import React from 'react'
-import './home.scss'
-const home = () => {
+import React from 'react';
+import './home.scss';
+
+const Home = () => {
   return (
-    <div>
-      Home
-    </div>
+    <section className="home">
+      <div className="banner"></div>
+    </section>
   )
-}
-export default home
+};
+
+export default Home;
