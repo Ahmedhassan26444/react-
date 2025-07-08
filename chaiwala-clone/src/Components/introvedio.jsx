@@ -5,9 +5,7 @@ const Introvedio = () => {
   return (
     <div className='intro'>
       <video src={video} muted autoPlay loop controlsList='nodownload'></video>
-      <div>
-        
-      </div>
+      <div></div>
     </div>
   );
 };
