@@ -4,11 +4,15 @@
   video {
     width: 100%;
     margin-top: -50px;
+    display: block;         // added to remove unwanted spacing
+    object-fit: contain;    // added to avoid full screen stretch
   }
 }
-  div{
-    width: 100%;
-    height: calc(100vh - 50px);
-    position:absolute;
-    top: 0%;
+
+div {
+  width: 100%;
+  height: 100vh;            // change here to allow blank space
+  position: relative;       // absolute was hiding content
+  top: 0%;
+  background-color: white;  // optional: make blank area white
 }
