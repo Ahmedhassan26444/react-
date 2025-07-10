@@ -1,27 +1,56 @@
-import React from 'react'
+import React from "react";
 
-const section = (h3 , text , hasBtn = true , btntext , imgsrc) => {
+const section = (
+  h3,
+  text,
+  hasBtn = true,
+  btntext,
+  imgsrc,
+  imgSize = "70%",
+  headingcolor,
+  backgroundcolor,
+  textcolor,
+  btnBgcolor,
+  btncolor
+) => {
   return (
-    <section className='section'>
-    <div>
-        <h3>
-            {h3}
+    <section
+      className="section"
+      style={{
+        backgroundColor: backgroundcolor,
+      }}
+    >
+      <div>
+        <h3
+          style={{
+            color: headingcolor,
+          }}
+        >
+          {h3}
         </h3>
-        <p>
-            {text}
+        <p
+          style={{
+            color: textcolor,
+          }}
+        >
+          {text}
         </p>
-        {
-            hasBtn && <button>
-                {btntext}
-            </button>
-        }
-        <div> 
-        <img src={imgsrc}  alt='Imgsrc'/>
+        {hasBtn && (
+          <button
+            style={{
+              color: btncolor,
+              backgroundColor: btnBgcolor,
+            }}
+          >
+            {btntext}
+          </button>
+        )}
+        <div>
+          <img src={imgsrc} alt="Imgsrc" style={{ width: imgSize }} />
         </div>
-    </div>
-
+      </div>
     </section>
-  )
-}
+  );
+};
 
-export default section
+export default section;
