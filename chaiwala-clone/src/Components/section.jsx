@@ -1,6 +1,6 @@
 import React from "react";
 
-const section = (
+const Section = ({
   h3,
   text,
   hasBtn = true,
@@ -12,7 +12,7 @@ const section = (
   textcolor,
   btnBgcolor,
   btncolor
-) => {
+}) => {
   return (
     <section
       className="section"
@@ -53,4 +53,4 @@ const section = (
   );
 };
 
-export default section;
+export default Section;
