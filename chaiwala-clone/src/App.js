@@ -3,20 +3,23 @@ import "./Style/intro.scss";
 import "./Style/section.scss";
 import Introvedio from "./Components/introvedio";
 import FreshTopicImg from "./Assets/academy.png";
-import data from "./Data/data.json"
+import data from "./Data/data.json";
 import Section from "./Components/section";
+import FreshTopic2Img from "./Assets/story.png";
+import TedTalksImg from "./Assets/in-the-news.gif"; 
 
 const yellow = "#fff100",
       pink = "#ed1e79",
       white = "#fff",
       brown = "#6d3d0f";
 
-
 function App() {
-  const {freshTopic} = data;
+  const { freshTopic, freshTopic2, tedTalks } = data; 
+
   return (
     <>
       <Introvedio />
+
       {/* FreshTopic */}
       <Section
         h3={freshTopic.heading}
@@ -28,6 +31,32 @@ function App() {
         textcolor={yellow}
         btnBgcolor={yellow}
         btncolor={pink}
+      />
+
+      {/* FreshTopic 2 */}
+      <Section
+        h3={freshTopic2.heading}
+        text={freshTopic2.text}
+        btntext={freshTopic2.btn}
+        imgsrc={FreshTopic2Img}
+        backgroundcolor={pink}
+        headingcolor={yellow}
+        textcolor={yellow}
+        btnBgcolor={yellow}
+        btncolor={pink}
+      />
+
+      {/* Ted Talks */}
+      <Section
+        h3={tedTalks.heading}
+        text={tedTalks.text}
+        btntext={tedTalks.btn}
+        imgsrc={TedTalksImg}
+        backgroundcolor={yellow}
+        headingcolor={pink}
+        textcolor={pink}
+        btnBgcolor={pink}
+        btncolor={yellow}
       />
     </>
   );
