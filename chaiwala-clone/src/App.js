@@ -6,7 +6,13 @@ import FreshTopicImg from "./Assets/academy.png";
 import data from "./Data/data.json";
 import Section from "./Components/section";
 import FreshTopic2Img from "./Assets/story.png";
-import TedTalksImg from "./Assets/in-the-news.gif"; 
+import TedTalksImg from "./Assets/in-the-news.gif";
+import mapImg from "./Assets/locations.png"; 
+import franchiseImg from "./Assets/franchise.gif"; 
+import coursesImg from "./Assets/image2.png"; 
+import albumImg from "./Assets/mba-cares.gif"; 
+import baratImg from "./Assets/image1.png"; 
+import chaiwalaImg from "./Assets/image3.png"; 
 
 const yellow = "#fff100",
       pink = "#ed1e79",
@@ -14,7 +20,7 @@ const yellow = "#fff100",
       brown = "#6d3d0f";
 
 function App() {
-  const { freshTopic, freshTopic2, tedTalks } = data; 
+  const { freshTopic, freshTopic2, tedTalks , franchise , map , courses ,album , barat , chaiwala } = data; 
 
   return (
     <>
@@ -57,6 +63,30 @@ function App() {
         textcolor={pink}
         btnBgcolor={pink}
         btncolor={yellow}
+      />
+      {/* franchise */}
+      <Section
+        h3={franchise.heading}
+        text={franchise.text}
+        btntext={franchise.btn}
+        imgsrc={franchiseImg}
+        backgroundcolor={white}
+        headingcolor={pink}
+        textcolor={brown}
+        btnBgcolor={brown}
+        btncolor={yellow}
+      />
+      {/* map */}
+      <Section
+        h3={map.heading}
+        text={map.text}
+        imgsrc={mapImg}
+        backgroundcolor={pink}
+        headingcolor={yellow}
+        textcolor={yellow}
+        btnBgcolor={brown}
+        btncolor={yellow}
+        hasBtn={false}
       />
     </>
   );
