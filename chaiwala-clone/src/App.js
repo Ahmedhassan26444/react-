@@ -88,6 +88,31 @@ function App() {
         btncolor={yellow}
         hasBtn={false}
       />
+         {/* courses */}
+      <Section
+        h3={courses.heading}
+        text={courses.text}
+        btntext={courses.btn}
+        imgsrc={coursesImg}
+        backgroundcolor={yellow}
+        headingcolor={pink}
+        textcolor={pink}
+        btnBgcolor={pink}
+        btncolor={pink}
+        imgSize={"30%"}
+      />
+        {/* album */}
+      <Section
+        h3={album.heading}
+        text={album.text}
+        btntext={album.btn}
+        imgsrc={albumImg}
+        backgroundcolor={white}
+        headingcolor={pink}
+        textcolor={brown}
+        btnBgcolor={pink}
+        btncolor={yellow}
+      />
     </>
   );
 }
