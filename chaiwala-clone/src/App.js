@@ -1,5 +1,6 @@
 import "./Style/App.scss";
 import "./Style/intro.scss";
+import "./Style/footer.scss";
 import "./Style/section.scss";
 import Introvedio from "./Components/introvedio";
 import FreshTopicImg from "./Assets/academy.png";
@@ -12,7 +13,8 @@ import franchiseImg from "./Assets/franchise.gif";
 import coursesImg from "./Assets/image2.png"; 
 import albumImg from "./Assets/mba-cares.gif"; 
 import baratImg from "./Assets/image1.png"; 
-import chaiwalaImg from "./Assets/image3.png"; 
+import chaiwalaImg from "./Assets/image3.png";
+import footer from  "./Components/footer.jsx";
 
 const yellow = "#fff100",
       pink = "#ed1e79",
@@ -113,6 +115,43 @@ function App() {
         btnBgcolor={pink}
         btncolor={yellow}
       />
+       {  /* barat */}
+      < Section
+        h3={barat.heading}
+        text={barat.text}
+        btntext={barat.btn}
+        imgsrc={baratImg}
+        backgroundcolor={white}
+        headingcolor={pink}
+        textcolor={brown}
+        btnBgcolor={pink}
+        btncolor={yellow}
+      />
+       {  /* barat */}
+      < Section
+        h3={barat.heading}
+        text={barat.text}
+        btntext={barat.btn}
+        imgsrc={baratImg}
+        backgroundcolor={pink}
+        headingcolor={yellow}
+        textcolor={yellow}
+        btnBgcolor={yellow}
+        btncolor={pink}
+      />
+ {  /* chaiwala */}
+      < Section
+        h3={chaiwala.heading}
+        text={chaiwala.text}
+        btntext={chaiwala.btn}
+        imgsrc={chaiwalaImg}
+        backgroundcolor={white}
+        headingcolor={pink}
+        textcolor={brown}
+        btnBgcolor={brown}
+        btncolor={yellow}
+      />
+     < footer />
     </>
   );
 }
