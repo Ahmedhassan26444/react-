@@ -1,4 +1,5 @@
 import React from "react";
+
 const Footer = () => {
   return (
     <>
@@ -32,6 +33,8 @@ const Footer = () => {
           ©CopyRight 2022 MB CHAIWALA. MADE BY 
         </p>
       </footer>
+
+      {/* Spacer div to allow scrolling over the footer (parallax effect) */}
       <div className="footer"></div>
     </>
   );

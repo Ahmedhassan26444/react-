@@ -2,10 +2,12 @@ import "./Style/App.scss";
 import "./Style/intro.scss";
 import "./Style/footer.scss";
 import "./Style/section.scss";
+
 import Introvedio from "./Components/introvedio";
-import FreshTopicImg from "./Assets/academy.png";
 import data from "./Data/data.json";
 import Section from "./Components/section";
+
+import FreshTopicImg from "./Assets/academy.png";
 import FreshTopic2Img from "./Assets/story.png";
 import TedTalksImg from "./Assets/in-the-news.gif";
 import mapImg from "./Assets/locations.png"; 
@@ -14,7 +16,8 @@ import coursesImg from "./Assets/image2.png";
 import albumImg from "./Assets/mba-cares.gif"; 
 import baratImg from "./Assets/image1.png"; 
 import chaiwalaImg from "./Assets/image3.png";
-import footer from  "./Components/footer.jsx";
+
+import Footer from "./Components/footer.jsx"; // ✅ Fixed import
 
 const yellow = "#fff100",
       pink = "#ed1e79",
@@ -22,7 +25,7 @@ const yellow = "#fff100",
       brown = "#6d3d0f";
 
 function App() {
-  const { freshTopic, freshTopic2, tedTalks , franchise , map , courses ,album , barat , chaiwala } = data; 
+  const { freshTopic, freshTopic2, tedTalks , franchise , map , courses , album , barat , chaiwala } = data; 
 
   return (
     <>
@@ -66,7 +69,8 @@ function App() {
         btnBgcolor={pink}
         btncolor={yellow}
       />
-      {/* franchise */}
+
+      {/* Franchise */}
       <Section
         h3={franchise.heading}
         text={franchise.text}
@@ -78,7 +82,8 @@ function App() {
         btnBgcolor={brown}
         btncolor={yellow}
       />
-      {/* map */}
+
+      {/* Map */}
       <Section
         h3={map.heading}
         text={map.text}
@@ -90,7 +95,8 @@ function App() {
         btncolor={yellow}
         hasBtn={false}
       />
-         {/* courses */}
+
+      {/* Courses */}
       <Section
         h3={courses.heading}
         text={courses.text}
@@ -103,7 +109,8 @@ function App() {
         btncolor={pink}
         imgSize={"30%"}
       />
-        {/* album */}
+
+      {/* Album */}
       <Section
         h3={album.heading}
         text={album.text}
@@ -115,8 +122,9 @@ function App() {
         btnBgcolor={pink}
         btncolor={yellow}
       />
-       {  /* barat */}
-      < Section
+
+      {/* Barat */}
+      <Section
         h3={barat.heading}
         text={barat.text}
         btntext={barat.btn}
@@ -127,8 +135,9 @@ function App() {
         btnBgcolor={pink}
         btncolor={yellow}
       />
-       {  /* barat */}
-      < Section
+
+      {/* Barat again with different colors */}
+      <Section
         h3={barat.heading}
         text={barat.text}
         btntext={barat.btn}
@@ -139,8 +148,9 @@ function App() {
         btnBgcolor={yellow}
         btncolor={pink}
       />
- {  /* chaiwala */}
-      < Section
+
+      {/* Chaiwala */}
+      <Section
         h3={chaiwala.heading}
         text={chaiwala.text}
         btntext={chaiwala.btn}
@@ -151,7 +161,9 @@ function App() {
         btnBgcolor={brown}
         btncolor={yellow}
       />
-     < footer />
+
+      {/* ✅ Correct Footer usage */}
+      <Footer />
     </>
   );
 }
