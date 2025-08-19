@@ -2,6 +2,7 @@ import "./Style/App.scss";
 import "./Style/intro.scss";
 import "./Style/footer.scss";
 import "./Style/section.scss";
+import "./Style/mediaQuery.scss";
 
 import Introvedio from "./Components/introvedio";
 import data from "./Data/data.json";
