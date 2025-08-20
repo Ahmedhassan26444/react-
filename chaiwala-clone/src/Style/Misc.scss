@@ -16,7 +16,6 @@
   border: none;
   box-shadow: 0 0 10px $red;
 }
-
 .cursorHoverMini {
   transform: scale(0.5);
   box-shadow: 0 0 20px $red;
@@ -27,7 +26,6 @@
   top: 2rem;
   left: 2rem;
   width: 9rem;
-  z-index: 1500;   // ✅ Added to keep above cursor
   img {
     width: 100%;
   }
@@ -47,7 +45,6 @@
   border-radius: 7px;
   transform-origin: bottom;
   transition: transform 0.5s;
-  z-index: 1500;   // ✅ Added to keep above cursor
   &:hover {
     transform: skewX(-10deg);
   }
