@@ -3,10 +3,14 @@ import "./Style/intro.scss";
 import "./Style/footer.scss";
 import "./Style/section.scss";
 import "./Style/mediaQuery.scss";
+import "./Style/Misc.scss";
+
 
 import Introvedio from "./Components/introvedio";
 import data from "./Data/data.json";
 import Section from "./Components/section";
+import Loader from "./Components/Loader";
+import Misc from "./Components/Misc";
 
 import FreshTopicImg from "./Assets/academy.png";
 import FreshTopic2Img from "./Assets/story.png";
